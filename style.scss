@@ -1,0 +1,288 @@
+*{
+  box-sizing: border-box;
+}
+h1,h2,h3,h4, h5,p{
+  margin: 0;
+}
+body{
+  font-family: "Times New Roman", serif;
+  font-size: 16px;
+  font-weight: 300;
+  display: -ms-flexbox;
+  display: flex;
+  justify-content: center;
+  -webkit-justify-content: center;
+  align-items: center;
+  -webkit-align-items: center;
+}
+
+.card{
+  position: absolute;
+  top:0;
+  width: 100%;
+  max-width: 615px;
+  background-color: #2A2A2B;
+  padding:7px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+
+  header{
+    background-color: #197BC1;
+    height: 80px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+
+    .search--icon{
+      color:#A3CAE6;
+      font-size: 40px;
+      &:hover{
+        color:darken(#A3CAE6,20)
+      }
+    }
+    .header--text{
+      display: inline-block;
+      text-align: center;
+      h3{
+        font-size: 1.7rem;
+      }
+      h5{
+        font-size: 1.3rem;
+      }
+    }
+    .message--icon{
+      color:#A3CAE6;
+      font-size: 40px;
+      &:hover{
+        color:darken(#A3CAE6,20)
+      }
+    }
+  }
+  main{
+    .title {
+      position: relative;
+      height: 456px;
+
+      .background{
+        background-image: url("html-css-card-challenge/background.jpeg");
+
+        filter: blur(2px);
+        -webkit-filter: blur(2px);
+        opacity: 0.3;
+        height: 100%;
+
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover
+      }
+      .main {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        background-color: rgba(0, 0, 0, 0.6);
+        height: 100%;
+        padding: 0 20px;
+        display: flex;
+        display: -webkit-flex;
+        flex-flow: column;
+        align-items: center;
+        -webkit-align-items: center;
+        justify-content: center;
+        -webkit-justify-content: center;
+        overflow: hidden;
+
+        .closed{
+          color:white;
+          font-family:Courier New,serif;
+          font-weight: bold;
+          font-size: 1.5rem;
+          background-color: red;
+          position: relative;
+          margin-left: 90%;
+          padding:5px 60px;
+          box-shadow: 1px 1px 2px black;
+          -webkit-transform: rotate(45deg);
+          -moz-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          -o-transform: rotate(45deg);
+          transform: rotate(45deg);
+        }
+        .title--logo {
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          border-radius: 5px;
+        }
+
+        .title--name {
+          margin-top: 20px;
+          margin-bottom: 15px;
+          color: #FEFEFE;
+          font-size: 1.8rem;
+        }
+
+        .title--address {
+          color: #FEFEFE;
+          font-size: 18px;
+        }
+
+        .buttons {
+          margin-top: 40px;
+          display: flex;
+          justify-content: space-between;
+
+          .icon--button {
+            background-color: rgba(0, 0, 0, 0.5);
+            height: 100px;
+            width: 100px;
+            border: 1px solid #6B6455;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 15px;
+          }
+
+          i {
+            color: #FEFEFE;
+            font-size: 40px;
+          }
+        }
+
+        .title--user {
+          color: #FEFEFE;
+          margin-left: 100%;
+        }
+      }
+    }
+    .social{
+      margin-top: -20px;
+      background-color: white;
+      height: 230px;
+      border-bottom: 3px solid #DDD6D0;
+
+      .information{
+        position: absolute;
+        z-index: 50;
+        left:0;
+        right:0;
+        background-color: white;
+        margin: -15px 20px;
+        padding: 25px 30px;
+        border: 1px solid #EDEDED;
+        border-radius: 10px;
+        box-shadow: 0px 0px 5px rgba(0,0,0,0.4);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h2{
+          color:black;
+          text-align: center;
+        }
+        p{
+          color:#525252;
+          margin-top: 5px;
+          font-size: 20px;
+        }
+      }
+      .social--buttons {
+        background-color: white;
+        margin: 20px;
+        padding-top: 140px;
+        display: flex;
+        justify-content: space-between;
+        .following {
+          position: relative;
+          background-color: #37CB32;
+          color: white;
+          font-size: 1.5rem;
+          border-radius: 5px;
+          padding: 25px 75px;
+
+        }
+        .social--b {
+          position: relative;
+          display: inline-block;
+          right: 0;
+          .social--button--one,.social--button--two {
+            color: #26B4F7;
+            font-size: 32px;
+            display: inline-block;
+            padding: 20px 35px;
+            border: 1px solid #ECECEC;
+          }
+          .social--button--one{
+            margin-right: 0px;
+            border-radius: 5px 0 0 5px;
+          }
+          .social--button--two{
+            margin-left: -5px;
+            border-radius: 0 5px 5px 0;
+          }
+        }
+      }
+    }
+    .other{
+      background-color: #EEE7E0;
+      padding-top:15px;
+      .starbucks {
+        background-color: white;
+        height: 130px;
+        margin:0 15px;
+        padding:30px;
+        .other--logo {
+          float: left;
+        }
+        .other--name{
+          display: inline-block;
+          margin: 10px 20px;
+        }
+        .other--address{
+          display: inline-block;
+          margin: 0 20px;
+        }
+      }
+    }
+  }
+  footer{
+    height:128px;
+    background-color: black;
+    color:white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    .leftfader{
+      position: absolute;
+      background-image: linear-gradient(to right, black, transparent);
+      bottom:0;
+      left:0;
+      height: 128px;
+      text-align: center;
+      margin: 0; padding: 0px 90px;
+    }
+    .rightfader{
+      position: absolute;
+      background-image: linear-gradient(to left, black, transparent);
+      bottom:0;
+      right:0;
+      height: 128px;
+      text-align: center;
+      margin: 0; padding: 0px 90px;
+    }
+    .active{
+      height: 100%;
+      display: flex;
+      align-items: center;
+      color: #36C633;
+      border-bottom: 2px solid #6D74D5;
+    }
+  }
+}
+
