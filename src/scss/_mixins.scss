@@ -1,0 +1,31 @@
+@mixin boxShadow($h: 0, $v: 0, $b: 0, $s: 0, $c: #000) {
+    box-shadow: $h $v $b $s $c;
+    -webkit-box-shadow: $h $v $b $s $c;
+}
+
+@mixin transform($r: 0deg, $tx: 0, $ty: 0) {
+    transform: rotate($r) translateX($tx) translateY($ty);
+    -webkit-transform: rotate($r) translateX($tx) translateY($ty);
+    -moz-transform: rotate($r) translateX($tx) translateY($ty);
+}
+
+@mixin flex($fd: row, $jc: flex-start, $ai: flex-start) {
+    display: flex;
+    flex-direction: $fd;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@mixin typography($ta: left, $tt: none, $ls: 0px) {
+    text-align: $ta;
+    text-transform: $tt;
+    letter-spacing: $ls;
+}
+
+@mixin absolute($t: auto, $r: auto, $b: auto, $l: auto) {
+    position: absolute;
+    top: $t;
+    right: $r;
+    bottom: $b;
+    left: $l;
+}
