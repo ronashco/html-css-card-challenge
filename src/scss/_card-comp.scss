@@ -1,0 +1,110 @@
+@import "mixins";
+
+// Card Component
+.card {
+    background-color: $light-color;
+    overflow: hidden;
+    /****** card__head ******/
+    .card__head {
+        background-image: url("../img/starbucks-bg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center left;
+        position: relative;
+        color: #fff;
+        padding: 1em;
+
+        &:before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background-color: rgba($dark-color, 0.7);
+            z-index: 0;
+            @include absolute($t: 0, $l: 0);
+        }
+        &:after {
+            content: "closed";
+            width: 120px;
+            font-size: 0.7em;
+            font-weight: bold;
+            background-color: $danger-color;
+            padding: 0.2em 1em;
+            @include absolute($t: 0, $r: 0);
+            @include typography($tt: uppercase, $ta: center, $ls: 1px);
+            @include transform(45deg, 37px, -14px);
+            @include boxShadow($v: 1px, $b: 3px, $c: rgba($dark-color, 0.9));
+        }
+        & > :last-child {
+            position: relative;
+            z-index: 2;
+            @include flex($fd: column, $jc: center, $ai: center);
+            .card__intro {
+                line-height: 1.3;
+                margin: 0.5em 0;
+                @include typography($tt: capitalize, $ta: center);
+                .card__title {
+                    font-weight: bold;
+                    font-size: 1.5em;
+                }
+            }
+            .card__contacts {
+                width: 80%;
+                font-size: 1.3em;
+                @include flex($jc: space-around);
+            }
+
+            .card__check {
+                align-self: flex-end;
+                font-size: 0.8em;
+                color: rgba($light-color, 0.5);
+            }
+        }
+    }
+    /****** card__body ******/
+    .card__body {
+        background-color: #fff;
+        @include boxShadow($v: 1px, $b: 3px, $c: rgba($dark-color, 0.2));
+        .card__info {
+            width: 90%;
+            padding: 0.5em;
+            margin: auto;
+            border: 1px solid $light-color;
+            border-radius: 3px;
+            background-color: #fff;
+            text-align: center;
+            @include flex($jc: space-around);
+            @include transform($ty: -7px);
+        }
+        .card__feedback {
+            width: 90%;
+            margin: auto;
+            padding: 0.5em 0;
+            @include flex($jc: space-between);
+            .card__feedback-item:last-child {
+                flex: 1;
+                margin-left: 0.3em;
+                border-radius: 3px;
+                border: 1px solid rgba($dark-color, 0.2);
+                @include flex();
+                .card__icon {
+                    width: 50%;
+                    text-align: center;
+                    padding: 0.4em 0;
+                    &:first-child {
+                        order: 2;
+                        border-left: 1px solid rgba($dark-color, 0.2);
+                    }
+                }
+            }
+        }
+    }
+    /****** card__footer ******/
+    .card__footer {
+        background-color: #fff;
+        width: 95%;
+        margin: 0.5em auto 1em;
+        padding: 0.5em;
+        border-radius: 3px;
+        @include flex($ai: center);
+    }
+}
