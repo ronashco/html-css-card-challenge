@@ -1,0 +1,11 @@
+{
+  "files.associations": {
+    "typescript.validate.enable": false,
+    "javascript.validate.enable": false
+  },
+  "editor.formatOnSave": true,
+  "emmet.includeLanguages": {
+    "typescriptreact": true,
+    "javascriptreact": true
+  }
+}

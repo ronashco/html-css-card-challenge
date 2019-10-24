@@ -1,0 +1,230 @@
+@import './normilize';
+@import './helpers';
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  border: 2px solid #000;
+  border-radius: 3px;
+}
+// header
+nav {
+  background-color: $primary;
+  height: 55px;
+  padding: 0 15px;
+  color: #fff;
+  i {
+    color: lighten($primary, 45%);
+    cursor: pointer;
+  }
+}
+// main
+// info section
+.info {
+  position: relative;
+  background: url('../images/background-section-info.png') no-repeat;
+  background-color: rgba(0, 0, 0, 0.4);
+  object-fit: cover;
+  background-size: 100%;
+  color: #fff;
+  .logo {
+    width: 110px;
+    height: 110px;
+    margin-top: 30px;
+    border-radius: 5%;
+  }
+
+  .images-info {
+    margin: 30px 0px 60px 0px;
+    span {
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      border: 1px solid #a09e9e;
+      border-radius: 50%;
+
+      i {
+        font-size: 4rem;
+        position: relative;
+        left: 23px;
+        top: 20px;
+      }
+    }
+  }
+  .account {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    color: #737373;
+  }
+}
+
+// closed
+.closed {
+  width: 105px;
+  height: 82px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  &::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 225px;
+    padding: 15px 0;
+    background-color: $red;
+    left: -25px;
+    top: 30px;
+    transform: rotate(38deg);
+  }
+  span {
+    position: absolute;
+    display: block;
+    z-index: 1;
+    color: #fff;
+    text-align: center;
+    right: 7px;
+    top: 25px;
+    transform: rotate(38deg);
+  }
+}
+
+//content
+.content {
+  background-color: #fff;
+  margin-bottom: 20px;
+  .user-info {
+    background-color: #fff;
+    width: 80%;
+    border: 1px solid #ccc;
+    padding: 15px 25px;
+    position: relative;
+    bottom: 30px;
+    border-radius: 5px;
+    margin: auto;
+    text-align: center;
+    .number {
+      font-size: #{$fnts30}rem;
+      font-weight: 600;
+    }
+    .title {
+      font-size: #{$fnts22}rem;
+      color: #444;
+    }
+  }
+
+  //button actions
+  .actions {
+    width: 88%;
+    margin: auto;
+    .following {
+      background-color: $green;
+      padding: 15px 45px;
+      flex: 1 1;
+      margin-right: 30px;
+      border: 0px;
+      font-size: #{$fnts22}rem;
+      border-radius: 5px;
+      color: white;
+    }
+
+    .btn-actions {
+      button {
+        padding: 15px 35px;
+        background-color: #fff;
+        color: rgba($primary, 0.5);
+        &:last-child {
+          border: 1px solid #ccc;
+          border-top-right-radius: 5px;
+          border-bottom-right-radius: 5px;
+        }
+        &:first-child {
+          border: 1px solid #ccc;
+          border-right: 0;
+          position: relative;
+          left: 3px;
+          border-top-left-radius: 5px;
+          border-bottom-left-radius: 5px;
+        }
+      }
+    }
+  }
+}
+
+//footer
+
+footer {
+  background-color: #eee7e1;
+}
+// address
+.address {
+  width: 87%;
+  margin: auto;
+  margin-top: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 15px 25px;
+  h1 {
+    margin: 15px 0px;
+  }
+  img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+  }
+}
+
+// tabs
+
+.links {
+  background: url('../images/background-section-info.png');
+
+  ul {
+    position: relative;
+    a {
+      height: 70px;
+      line-height: 70px;
+      font-size: #{$fnts22}rem;
+      font-weight: 400;
+      color: #fff;
+    }
+    li {
+      height: 70px;
+      cursor: pointer;
+      &.active {
+        border-bottom: 4px solid rgba($primary, 0.8);
+        a {
+          color: $green;
+        }
+      }
+    }
+    // gradient at the end and start
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0px;
+      width: 150px;
+      height: 70px;
+      background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(22, 22, 40, 1) 6%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0px;
+      width: 150px;
+      height: 70px;
+      background: linear-gradient(
+        270deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(22, 22, 40, 1) 6%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
+  }
+}

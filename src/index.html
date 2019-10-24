@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Anton&display=swap"
+      rel="stylesheet"
+    />
+    <title>html css card challenge</title>
+  </head>
+  <body>
+    <div class="container">
+      <!-- header -->
+      <header role="navbar">
+        <!-- navbar -->
+        <nav class="flex flex--grow">
+          <ul
+            class="flex flex--row flex--grow flex--justify-between flex--align-center"
+          >
+            <!-- edit icon -->
+            <li>
+              <i class="material-icons">beenhere</i>
+            </li>
+            <!-- title -->
+            <li class="flex  flex--column text--center">
+              <h3>StarBucks</h3>
+              <p>Activity</p>
+            </li>
+            <!-- search icon -->
+            <li>
+              <i class="material-icons">search</i>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <!--  /header -->
+
+      <main role="main">
+        <!-- info -->
+        <section class="info flex flex--column flex--align-center" role="info">
+          <div class="closed"><span>CLOSED</span></div>
+          <img
+            src="./images/starbucks-logo.png"
+            alt="starbucks logo"
+            class="logo"
+          />
+          <h1>Starbucks</h1>
+          <p>@N. San Antonio Rd, Los Atlos</p>
+          <div class="images-info">
+            <span><i class="material-icons">phone_iphone</i></span>
+            <span><i class="material-icons">map</i></span>
+            <span><i class="material-icons">date_range</i></span>
+          </div>
+          <span class="account"
+            ><i class="material-icons">account_circle</i></span
+          >
+        </section>
+        <!-- / info -->
+        <!-- content -->
+        <section class="content">
+          <!-- user-info box -->
+          <div class="flex flex--row flex--justify-between user-info">
+            <!-- followers -->
+            <div class="item">
+              <p class="number">868</p>
+              <p class="title">Followers</p>
+            </div>
+            <!-- buddies -->
+            <div class="item">
+              <p class="number">16</p>
+              <p class="title">Buddies</p>
+            </div>
+            <!-- thumbsup -->
+            <div class="item">
+              <p class="number">14</p>
+              <p class="title">ThumbsUp</p>
+            </div>
+          </div>
+          <!-- / user-info box -->
+
+          <!-- buttons actions -->
+          <div class="actions flex flex--row ">
+            <button class="following">Following</button>
+            <!-- share and like  -->
+            <div class="btn-actions">
+              <button>
+                <i class="material-icons">screen_share</i>
+              </button>
+              <button>
+                <i class="material-icons">thumb_up</i>
+              </button>
+            </div>
+          </div>
+        </section>
+        <!-- / content -->
+        <!-- footer -->
+        <footer roll="content info" class="flex flex--column">
+          <!-- address -->
+          <section class="address flex flex--row flex--align-center">
+            <!-- logo -->
+            <img src="./images/starbucks-logo.png" alt=" starbucks logo" />
+            <!-- address info -->
+            <div class="info-address">
+              <h1>Starbucks</h1>
+              <p>@N. San Antonio Rd, Los Atlos</p>
+            </div>
+          </section>
+          <!-- tabs  -->
+          <section class="links flex flex--row">
+            <!-- links other section -->
+            <ul class="flex flex--row flex--grow flex--justify-between">
+              <li><a>VIDEOS</a></li>
+              <li><a>DEALS</a></li>
+              <li class="active"><a>ACTIVITY</a></li>
+              <li><a>SOCIAL</a></li>
+              <li><a>AGGREGATE</a></li>
+            </ul>
+            <!-- links -->
+          </section>
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>

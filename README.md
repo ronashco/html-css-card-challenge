@@ -1,9 +1,15 @@
 # html-css-card-challenge
 
-An HTML/CSS development challenge for implementing a card from given image. 
-![css test image](http://static.pushe.co/challenge/card.png "card")
+##installation
 
-## Introduction 
+`yarn install`
+`yarn start`
+
+An HTML/CSS development challenge for implementing a card from given image.
+![css test image](http://static.pushe.co/challenge/card.png 'card')
+
+## Introduction
+
 In this challenge, you are going to implement image of a card in HTML/CSS. You need to deliver an html file
 with possibly some suplementray files (`.css`, `image`, ...) . Opening the html file in any popular browser should show the card you implementd in the center of the page.
 
@@ -20,4 +26,4 @@ We expect a clean, readable and maintainable code with meaningful comments.
 1. Fork this repository (if you don't know how to do that, Google is your friend)
 2. Develop the given challenge
 3. Commit and Push your code to your new repository
-3. Send us a pull request, we will review your code and get back to you
+4. Send us a pull request, we will review your code and get back to you
